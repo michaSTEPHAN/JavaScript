@@ -11,24 +11,26 @@
     padding-bottom: 20px;
 }
 
+/* -------------------------------------- */
+/* Gestion de l'affichage des cards       */
+/* -------------------------------------- */
 #todoCards {
     display: flex;
     gap: 10px;
 }
-
-#btn {
-    margin-top: 50px;
-    margin-bottom: 20px;
-    width: 500px;
-}
-
-
-
 .todoCard {
     position: relative;
     width: 163px;
 }
 
+/* -------------------------------------- */
+/* Gestion du bouton DELETE               */
+/* -------------------------------------- */
+#btn {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    width: 500px;
+}
 .delBtn {
     position: absolute;
     bottom: 0;

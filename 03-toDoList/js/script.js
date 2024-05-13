@@ -21,11 +21,17 @@ majCompteur();          // On met à jour le compteur en entrant sur l'écran
 addBtn.addEventListener('click', addTask);
 //--------------------------------------------------------------------------------------------
 
+//--------------------------------------------------------------------------------------------
+// On définit un evenement CLICK sur le bouton "delete"
+// On execute la fonction "delTask" avec le paramètre "taskCard" si on clique sur le bouton "delete"
+delBtn.addEventListener('click', function () {
+    delTask(taskCard);
+})
+//--------------------------------------------------------------------------------------------
 
-//********************************************************************//
-//                          FONCTION AJOUT                            //
-//********************************************************************//
-
+//********************************************************************************************//
+//                                     FONCTION AJOUT                                         //
+//********************************************************************************************//
 // Code qui s'execute lorsque on clique sur le bouton "add a task"
 function addTask() {
 
@@ -48,16 +54,9 @@ function addTask() {
 }
 
 
-//********************************************************************//
-//                     FONCTION SUPPRESSION                           //
-//********************************************************************//
-
-// On définit un evenement CLICK sur le bouton "delete"
-// On execute la fonction "delTask" avec le paramètre "taskCard" si on clique sur le bouton "delete"
-delBtn.addEventListener('click', function () {
-    delTask(taskCard);
-})
-
+//********************************************************************************************//
+//                                   FONCTION SUPPRESSION                                     //
+//********************************************************************************************//
 // La méthode "Element.remove()"" retire l'élément courant du DOM.
 function delTask(task) {
     task.remove();          // On supprime la task
@@ -65,9 +64,9 @@ function delTask(task) {
 }
 
 
-//********************************************************************//
-//                       FONCTION COMPTEUR                            //
-//********************************************************************//
+//********************************************************************************************//
+//                                     FONCTION COMPTEUR                                      //
+//********************************************************************************************//
 // "taskContainer.children.length" permet de compter le nombre de "task" sur l'écran
 function majCompteur() {
     compteur.textContent = taskContainer.children.length;
